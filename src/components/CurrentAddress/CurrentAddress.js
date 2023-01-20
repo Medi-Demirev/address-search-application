@@ -48,8 +48,9 @@ const CurrentAddress = ({ data }) => {
           <div className="current-address">
             <ol className="border">
               {data.map((currentAddress) => (
-                <li className="list" key={currentAddress.id}  >
+                <li className="list" key={currentAddress.id}>
                   {currentAddress.address}
+                  <div className="btn-container">
                   <button className="location-btn"
                     title="Локация на адреса"
                     onClick={() => {
@@ -64,9 +65,10 @@ const CurrentAddress = ({ data }) => {
                     }}
                     className="remove-btn"
                     title="Премахни от списъка"
-                  >
+                    >
                     <i className="far fa-trash-alt"></i>
-                  </button>
+                  </button>  
+                      </div>
                 </li>
               ))}
             </ol>
